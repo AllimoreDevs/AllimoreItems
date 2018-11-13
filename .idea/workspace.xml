@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="AllimoreItems:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8883d6ef-0a52-41ae-ab94-ff4c2ebe954b" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/Sleep/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-799858807">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="12" />
+          <entry key="project.open.time.0" value="3" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.19" value="2" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.20" value="1" />
+          <entry key="project.open.time.24" value="2" />
+          <entry key="project.open.time.25" value="2" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.opened" value="14" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="227" />
+          <entry key="yml" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="227" />
+          <entry key="YAML" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="124" />
+          <entry key="java" value="62920" />
+          <entry key="yml" value="1643" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="62920" />
+          <entry key="PLAIN_TEXT" value="124" />
+          <entry key="YAML" value="1643" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2176">
+              <caret line="128" column="32" selection-start-line="128" selection-start-column="32" selection-end-line="128" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/CommandManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2363">
+              <caret line="155" column="54" selection-start-line="155" selection-start-column="54" selection-end-line="155" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#IsPlayer#0;class#CommandManager#0" />
+                <element signature="method#GivePlayerItem#0;class#CommandManager#0" />
+                <element signature="method#RunTownyPortalCommand#0;class#CommandManager#0" />
+                <element signature="method#RunTownyCharmCommand#0;class#CommandManager#0" />
+                <element signature="method#RunWarpScrollCommand#0;class#CommandManager#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/AllimoreItems.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/Utilities/Utils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="115" column="38" selection-start-line="115" selection-start-column="38" selection-end-line="115" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#ItemsMatch#0;class#Utils#0" />
+                <element signature="method#ConstructItemStack#0;class#Utils#0" />
+                <element signature="method#ConstructItemStack#1;class#Utils#0" />
+                <element signature="method#ConstructUseString#0;class#Utils#0" />
+                <element signature="method#ReadUsesFromLore#0;class#Utils#0" />
+                <element signature="method#ReadUsesFromString#0;class#Utils#0" />
+                <element signature="method#UpdateUseLine#0;class#Utils#0" />
+                <element signature="method#SplitOffCharmStackMain#0;class#Utils#0" />
+                <element signature="method#SplitOffCharmStackOff#0;class#Utils#0" />
+                <element signature="method#ConsumeFromMainHand#0;class#Utils#0" />
+                <element signature="method#ConsumeFromOffHand#0;class#Utils#0" />
+                <element signature="e#3825#3826#0" expanded="true" />
+                <element signature="e#3874#3875#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/Utilities/Triggers.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#IsTool#0;class#Triggers#0" />
+                <element signature="method#IsSword#0;class#Triggers#0" />
+                <element signature="method#IsArmor#0;class#Triggers#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmTownPortal.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmSun.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/CharmLang.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmResurection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmRain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmClearSky.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/FoodSilverFruit.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/FoodSilverJuice.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/PotionElixirOfLife.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/PotionPhilterOfLife.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/Utilities/CharmLang.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/MagicMirror.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/ScrollHome.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/ScrollWarp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/ScrollTownPortal.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmWarp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmReturn.java" />
+        <option value="$PROJECT_DIR$/Sleep/src/main/java/net/allimore/sleep/InteractListener.java" />
+        <option value="$PROJECT_DIR$/Sleep/src/main/java/net/allimore/sleep/Sleep.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmIncorpTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmIncorporeal.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/BlockPlaceListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/tasks/ReturnTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/tasks/IncorpReturnTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/tasks/PyroReturnTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/MundusBerry.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/FoodMundusBerry.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/FoodMundusBerries.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/FoodMundusRoots.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/tasks/MundusReturnTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/FoodMundusRootExtract.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmPyroCloak.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/FoodMundusExtract.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/tasks/CharmAirSphere.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmZephyr.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/ConsumeListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/DamageListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmAirSphere.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/TownyListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/InteractListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmValkyrie.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmLasso.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/BlockListener.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/CommandManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/tasks/ToolAllimoreBreaker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/AllimoreItems.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CraftListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/CraftListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/Utilities/Utils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/Utilities/Triggers.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1288" />
+    <option name="y" value="40" />
+    <option name="width" value="1296" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Allimore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Allimore" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Allimore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Allimore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Allimore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Allimore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Allimore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Allimore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Allimore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Allimore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tod" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Allimore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Allimore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tod" type="462c0819:PsiDirectoryNode" />
+              <item name="items" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Allimore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Allimore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tod" type="462c0819:PsiDirectoryNode" />
+              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Allimore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Allimore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542146429641" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Spigot 1.13.2 Project/Paperclip.jar!/" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JAR Application.Spiggot">
+    <configuration name="Spiggot" type="JarApplication" factoryName="JAR Application" singleton="true">
+      <option name="JAR_PATH" value="$USER_HOME$/Documents/Spigot 1.13.2 Project/Paperclip.jar" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\altai\Documents\Spigot 1.13.2 Project" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <module name="Allimore" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Allimore build" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="package" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="Sleep build" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="package" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/Sleep" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JAR Application.Spiggot" />
+      <item itemvalue="Maven.Allimore build" />
+      <item itemvalue="Maven.Sleep build" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8883d6ef-0a52-41ae-ab94-ff4c2ebe954b" name="Default Changelist" comment="" />
+      <created>1541456785770</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1541456785770</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1288" y="40" width="1296" height="1000" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Designer" order="0" />
+      <window_info id="UI Designer" order="1" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.27022654" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.3290993" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="2" weight="0.3290993" />
+      <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.3290993" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.3290993" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info anchor="right" id="Theme Preview" order="1" />
+      <window_info anchor="right" id="Palette&#9;" order="2" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/Relic.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/ICharm.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmSun.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmResurection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmRain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="601">
+          <caret line="43" column="99" selection-start-line="43" selection-start-column="99" selection-end-line="43" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmClearSky.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="40" lean-forward="true" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/Utilities/SoundInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/Utilities/CharmUseInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/Utilities/CharmSounds.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/FoodSilverJuice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/Utilities/CharmLang.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="47" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/ScrollHome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="25" column="72" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/ScrollWarp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="21" column="64" lean-forward="true" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmTownPortal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="83" column="17" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmWarp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="79" column="23" lean-forward="true" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmReturn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="90" column="52" selection-start-line="90" selection-start-column="52" selection-end-line="90" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sleep/src/main/java/net/allimore/sleep/Sleep.java" />
+    <entry file="file://$PROJECT_DIR$/Sleep/src/main/java/net/allimore/sleep/InteractListener.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/BlockPlaceListener.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/Tasks.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/tasks/PyroReturnTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/PotionElixirOfLife.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="60" column="34" lean-forward="true" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/PotionPhilterOfLife.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="80" column="12" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/FoodMundusRoots.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/tasks/IncorpReturnTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/tasks/MundusReturnTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/FoodSilverFruit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmPyroCloak.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="43" column="44" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/FoodMundusExtract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmZephyr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmIncorporeal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="29" column="88" selection-start-line="29" selection-start-column="88" selection-end-line="29" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmTame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="67" column="40" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/ConsumeListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/DamageListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="23" column="54" lean-forward="true" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmAirSphere.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/ScrollTownPortal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-419">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmMagicMirror.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" column="72" selection-start-line="23" selection-start-column="72" selection-end-line="23" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/InteractListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="37" column="89" selection-start-line="37" selection-start-column="88" selection-end-line="37" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/TownyListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="55" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmValkyrie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="94" column="44" lean-forward="true" selection-start-line="94" selection-start-column="44" selection-end-line="94" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmLasso.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="601">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/BlockListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="124" lean-forward="true" selection-start-line="16" selection-start-column="124" selection-end-line="16" selection-end-column="124" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2176">
+          <caret line="128" column="32" selection-start-line="128" selection-start-column="32" selection-end-line="128" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/CommandManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2363">
+          <caret line="155" column="54" selection-start-line="155" selection-start-column="54" selection-end-line="155" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#IsPlayer#0;class#CommandManager#0" />
+            <element signature="method#GivePlayerItem#0;class#CommandManager#0" />
+            <element signature="method#RunTownyPortalCommand#0;class#CommandManager#0" />
+            <element signature="method#RunTownyCharmCommand#0;class#CommandManager#0" />
+            <element signature="method#RunWarpScrollCommand#0;class#CommandManager#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/AllimoreItems.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/CraftListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/ToolAllimoreBreaker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/Utilities/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="115" column="38" selection-start-line="115" selection-start-column="38" selection-end-line="115" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#ItemsMatch#0;class#Utils#0" />
+            <element signature="method#ConstructItemStack#0;class#Utils#0" />
+            <element signature="method#ConstructItemStack#1;class#Utils#0" />
+            <element signature="method#ConstructUseString#0;class#Utils#0" />
+            <element signature="method#ReadUsesFromLore#0;class#Utils#0" />
+            <element signature="method#ReadUsesFromString#0;class#Utils#0" />
+            <element signature="method#UpdateUseLine#0;class#Utils#0" />
+            <element signature="method#SplitOffCharmStackMain#0;class#Utils#0" />
+            <element signature="method#SplitOffCharmStackOff#0;class#Utils#0" />
+            <element signature="method#ConsumeFromMainHand#0;class#Utils#0" />
+            <element signature="method#ConsumeFromOffHand#0;class#Utils#0" />
+            <element signature="e#3825#3826#0" expanded="true" />
+            <element signature="e#3874#3875#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/Utilities/Triggers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#IsTool#0;class#Triggers#0" />
+            <element signature="method#IsSword#0;class#Triggers#0" />
+            <element signature="method#IsArmor#0;class#Triggers#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>AllimoreItems:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Minecraft (Sleep)|Minecraft</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Sleep</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.destroystokyo.paper:paper-api:1.13.2-R0.1-SNAPSHOT</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

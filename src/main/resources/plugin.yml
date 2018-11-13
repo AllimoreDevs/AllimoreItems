@@ -1,0 +1,129 @@
+name: AllimoreItems
+version: ${project.version}
+main: net.allimore.tod.AllimoreItems
+prefix: Allimore
+authors: [TodAtsu]
+description: A set of RPG Items created for the Allimore Server
+website: Allimore.net
+api-version: 1.13
+softdepend: [Essentials]
+commands:
+  suncharm:
+    description: Gives the player a suncharm
+    usage: /suncharm
+    permission: allimore.sunCharm
+
+  skycharm:
+      description: Gives the player a Charm of the Clear Skies.
+      usage: /skycharm
+      permission: allimore.skyCharm
+
+  raincharm:
+      description: Gives the player a Charm of Rain.
+      usage: /raincharm
+      permission: allimore.rainCharm
+
+  tamecharm:
+    description: Gives the player a Charm of Taming.
+    usage: /tamecharm
+    permission: allimore.tameCharm
+
+  zephyrcharm:
+      description: Gives you a Zephyr Charm.
+      usage: /zephyrcharm
+      permission: allimore.zephyrCharm
+
+  resurrectioncharm:
+    description: Gives you a Resurrection Charm.
+    usage: /resurectioncharm
+    permission: allimore.ressurectionCharm
+
+  elixir:
+    description: Gives you an Elixir of Life.
+    usage: /elixir
+    permission: allimore.elixir
+
+  philter:
+    description: Gives you an Philter of Life.
+    usage: /philter
+    permission: allimore.philter
+
+  magicmirror:
+      description: Gives you a Magic Mirror.
+      usage: /magicmirror
+      permission: allimore.mirror
+
+  portalscroll:
+      description: Gives you a scroll that will magically transport you to a town spawn.
+      usage: /portalscroll <townname>
+      permission: allimore.portalScroll
+
+  towncharm:
+    description: Gives you a charm that will magically transport you to a town spawn.
+    usage: /towncharm <townname>
+    permission: allimore.townCharm
+
+  homescroll:
+    description: Gives you a scroll that will magically transport you home
+    usage: /homescroll
+    permission: allimore.homeScroll
+
+  silverfruit:
+    description: Gives you a delicious silver fruit.
+    usage: /silverfruit
+    permission: allimore.silverFruit
+
+  silverjuice:
+    description: Gives you a delicious silver fruit juice.
+    usage: /silverjuice
+    permission: allimore.silverJuice
+
+  returncharm:
+    description: Gives you a return charm.
+    usage: /returncharm
+    permission: allimore.returnCharm
+
+  warpscroll:
+    description: Gives you a warp scroll.
+    usage: /warpscroll <warpname>
+    permission: allimore.warpScoll
+
+  warpcharm:
+    description: Gives you a warp charm.
+    usage: /warpcharm <warpname>
+    permission: allimore.warpCharm
+
+  incorporealcharm:
+    description: Gives you an Incorporeal Pendant.
+    usage: /incorporealcharm
+    permission: allimore.incorpCharm
+
+  pyrocharm:
+    description: Gives you a Pyromancers Cloak.
+    usage: /pyrocharm
+    permission: allimore.pyroCharm
+
+  mundusRoots:
+    description: Gives you a bundle of Mundus Roots
+    usage: /mundusroots
+    permission: allimore.mundusRoots
+
+  mundusExtract:
+    description: Gives you a potion of Mundus Root Extract
+    usage: /mundusextract
+    permission: allimore.mundusExtract
+
+  valkyrieCharm:
+    description: Gives you a Valkyrie Stone.
+    usage: /valkyriecharm
+    permission: allimore.valkyriecharm
+
+  valkyrie:
+    description: Toggles flight if you are in your own town.
+    usage: /valkyrie
+    permission:  allimore.valkyrie
+
+  allimoreBreaker:
+    description: Gives you an Allimore Breaker Pick
+    usage: /allimoreBreaker
+    permission: allimore.breaker
