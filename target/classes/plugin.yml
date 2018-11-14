@@ -122,3 +122,8 @@ commands:
     description: Gives you an Allimore Breaker Pick
     usage: /allimoreBreaker
     permission: allimore.breaker
+
+  stormSurge:
+    description: Gives you a Storm Surge Sword
+    usage: /stormsurge
+    permission: allimore.stormSurge

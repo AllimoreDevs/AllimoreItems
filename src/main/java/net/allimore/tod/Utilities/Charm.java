@@ -19,8 +19,13 @@ public class Charm {
         return true;
     }
 
-    public boolean ItemMatchOffHand(Player player){
+    public boolean ItemMatchMainHand(Player player){
         if(player.getInventory().getItemInMainHand() == null) { return false; }
+        return ItemMatch(player.getInventory().getItemInMainHand());
+    }
+
+    public boolean ItemMatchOffHand(Player player){
+        if(player.getInventory().getItemInOffHand() == null) { return false; }
         return ItemMatch(player.getInventory().getItemInOffHand());
     }
 }

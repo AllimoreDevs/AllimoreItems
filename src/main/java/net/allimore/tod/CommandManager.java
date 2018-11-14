@@ -49,6 +49,7 @@ public class CommandManager implements CommandExecutor
         plugin.getCommand("mundusExtract").setExecutor(this);
         plugin.getCommand("valkyrieCharm").setExecutor(this);
         plugin.getCommand("allimoreBreaker").setExecutor(this);
+        plugin.getCommand("stormSurge").setExecutor(this);
     }
 
     @Override
@@ -147,6 +148,10 @@ public class CommandManager implements CommandExecutor
         }
         if (command.getName().equalsIgnoreCase("allimoreBreaker")){
             GivePlayerItem(sender, ToolAllimoreBreaker.Create());
+            return true;
+        }
+        if (command.getName().equalsIgnoreCase("stormsurge")){
+            GivePlayerItem(sender, ToolStormSurge.Create());
             return true;
         }
         return true;

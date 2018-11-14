@@ -1,10 +1,15 @@
 package net.allimore.tod.Utilities;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.metadata.FixedMetadataValue;
+import org.bukkit.metadata.MetadataValue;
+import org.bukkit.metadata.Metadatable;
+import org.bukkit.plugin.Plugin;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,6 +62,21 @@ public class Utils {
         }
 
         return Integer.parseInt(string.substring(2, firstSpaceIndex));
+    }
+
+    public static boolean ReadBooleanFromLine(ItemStack item, String prefix, int line){
+       List<String> lore = item.getLore();
+       String lineString = lore.get(line);
+       String subString = lineString.substring(prefix.length());
+       return Boolean.valueOf(subString);
+    }
+
+    public static void SetBooleanOnLine(ItemStack item, String prefix, int line, boolean bool){
+        ItemMeta meta = item.getItemMeta();
+        List<String> lore = item.getLore();
+        lore.set(line, prefix + Boolean.toString(bool));
+        meta.setLore(lore);
+        item.setItemMeta(meta);
     }
 
     public static ItemStack UpdateUseLine(ItemStack item, int line, int uses){

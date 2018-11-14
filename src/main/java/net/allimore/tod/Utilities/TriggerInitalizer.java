@@ -26,6 +26,7 @@ public class TriggerInitalizer {
     private static PotionPhilterOfLife philter;
     private static ToolAllimoreBreaker allimoreBreaker;
     private static CharmTame charmTame;
+    private static ToolStormSurge stormSurge;
 
     public static void InitTriggers(){
         sun = new CharmSun();
@@ -49,5 +50,6 @@ public class TriggerInitalizer {
         philter = new PotionPhilterOfLife();
         allimoreBreaker = new ToolAllimoreBreaker();
         charmTame = new CharmTame();
+        stormSurge = new ToolStormSurge();
     }
 }
