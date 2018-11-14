@@ -1,7 +1,6 @@
 package net.allimore.tod;
 
 import com.earth2me.essentials.Essentials;
-import net.allimore.tod.Utilities.TriggerInitalizer;
 import net.allimore.tod.items.CharmValkyrie;
 import net.allimore.tod.items.ToolStormSurge;
 import org.bukkit.Server;

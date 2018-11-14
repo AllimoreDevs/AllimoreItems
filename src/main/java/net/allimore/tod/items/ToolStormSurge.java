@@ -49,7 +49,7 @@ public class ToolStormSurge extends Charm implements ITriggerRecieveDamage, ITri
     private static int damageEnchantLevel = 5;
 
     private static double ACTIVATION_CHANCE = 0.4;
-    private static double RANGE = 5;
+    private static double RANGE = 15;
     private static int FORCE = 1;
 
     public static ArrayList<BukkitRunnable> CoolDownTasks = new ArrayList<>();
@@ -77,6 +77,7 @@ public class ToolStormSurge extends Charm implements ITriggerRecieveDamage, ITri
 
     @Override
     public void RunTrigger(EntityDamageEvent event) {
+        if(! (event.getEntity() instanceof Player) ) { return; }
         Player player = (Player)event.getEntity();
         if(! super.ItemMatchMainHand(player)){ return; }
 
@@ -90,18 +91,23 @@ public class ToolStormSurge extends Charm implements ITriggerRecieveDamage, ITri
     public void RunTrigger(EntityDamageByEntityEvent event) {
         if(event.getDamager() instanceof Player){
             Player player = (Player)event.getDamager();
+            if(! (event.getCause() == EntityDamageEvent.DamageCause.ENTITY_ATTACK) ) { return; }
             if(! super.ItemMatchMainHand(player)) { return; }
+
+            ThrownBack(event.getEntity(), player);
             StrikeEntity(event.getEntity(), player);
             return;
 
         } else if (event.getEntity() instanceof  Player){
             Player player = (Player)event.getEntity();
             if(! super.ItemMatchMainHand(player)) { return; }
+            if(event.getDamager() == player) { return; }
+            if(! (event.getCause() == EntityDamageEvent.DamageCause.ENTITY_ATTACK) ) { return; }
 
             if(Utils.TryChance(ACTIVATION_CHANCE)){
-                event.getDamager().getWorld().strikeLightning(event.getDamager().getLocation());
+                StrikeEntity(event.getDamager(), player);
+                return;
             }
-            return;
         }
     }
 
@@ -136,7 +142,6 @@ public class ToolStormSurge extends Charm implements ITriggerRecieveDamage, ITri
 
     private static void StrikeEntity(Entity entity, Player player){
         player.getWorld().strikeLightning(entity.getLocation());
-        ThrownBack(entity, player);
     }
 
     private static void ThrownBack(Entity entity, Player player){

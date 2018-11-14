@@ -1,7 +1,6 @@
-package net.allimore.tod.Utilities;
+package net.allimore.tod;
 
 import net.allimore.tod.items.*;
-import org.bukkit.Server;
 
 public class TriggerInitalizer {
 

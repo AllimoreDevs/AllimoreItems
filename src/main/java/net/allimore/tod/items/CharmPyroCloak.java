@@ -130,6 +130,7 @@ public class CharmPyroCloak extends Charm implements ITriggerInteract, ITriggerR
 
     @Override
     public void RunTrigger(EntityDamageEvent event) {
+        if(! (event.getEntity() instanceof Player) ) { return; }
         if (CharmPyroCloak.FIRE_IMMUNE_PLAYERS.contains( (Player)event.getEntity() )){
             if(CharmPyroCloak.ImuneTo(event.getCause())){
                 event.setCancelled(true);

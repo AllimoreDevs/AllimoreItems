@@ -7,20 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8883d6ef-0a52-41ae-ab94-ff4c2ebe954b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/ToolStormSurge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/tasks/StormSurgeUncool.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/allimore/tod/AllimoreItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/allimore/tod/AllimoreItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/allimore/tod/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/allimore/tod/CommandManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/allimore/tod/Utilities/Charm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/allimore/tod/Utilities/Charm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/allimore/tod/Utilities/TriggerInitalizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/allimore/tod/Utilities/TriggerInitalizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/allimore/tod/Utilities/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/allimore/tod/Utilities/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/allimore/tod/CommandManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/allimore/tod/CommandManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/allimore/tod/Utilities/Charm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/allimore/tod/Utilities/Charm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/allimore/tod/Utilities/TriggerInitalizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/allimore/tod/Utilities/TriggerInitalizer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/allimore/tod/Utilities/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/allimore/tod/Utilities/Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/allimore/tod/DamageListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/allimore/tod/DamageListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/allimore/tod/Utilities/TriggerInitalizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/allimore/tod/TriggerInitalizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmIncorporeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmIncorporeal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmPyroCloak.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmPyroCloak.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmResurection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmResurection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmZephyr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmZephyr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/FoodMundusExtract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/FoodMundusExtract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/ToolStormSurge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/ToolStormSurge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/allimore/tod/Utilities/TriggerInitalizer.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -35,7 +32,7 @@
     <session id="-799858807">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.19" value="2" />
@@ -49,26 +46,26 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="303" />
+          <entry key="java" value="311" />
           <entry key="yml" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="303" />
+          <entry key="JAVA" value="311" />
           <entry key="YAML" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="124" />
-          <entry key="java" value="74287" />
+          <entry key="java" value="74473" />
           <entry key="yml" value="1696" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="74287" />
+          <entry key="JAVA" value="74473" />
           <entry key="PLAIN_TEXT" value="124" />
           <entry key="YAML" value="1696" />
         </counts>
@@ -107,7 +104,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/AllimoreItems.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="822">
-              <caret line="60" column="96" selection-start-line="60" selection-start-column="96" selection-end-line="60" selection-end-column="96" />
+              <caret line="59" column="96" selection-start-line="59" selection-start-column="96" selection-end-line="59" selection-end-column="96" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -118,19 +115,29 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/ToolStormSurge.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="103" column="19" selection-start-line="103" selection-start-column="19" selection-end-line="103" selection-end-column="19" />
+            <state relative-caret-position="285">
+              <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#ToolStormSurge#0;class#ToolStormSurge#0" />
                 <element signature="method#Create#0;class#ToolStormSurge#0" />
-                <element signature="method#RunTrigger#0;class#ToolStormSurge#0" />
+                <element signature="method#RunTrigger#1;class#ToolStormSurge#0" />
                 <element signature="method#RunTrigger#2;class#ToolStormSurge#0" />
-                <element signature="e#5207#5208#0" expanded="true" />
-                <element signature="e#5234#5235#0" expanded="true" />
-                <element signature="e#5281#5282#0" expanded="true" />
-                <element signature="e#5326#5327#0" expanded="true" />
-                <element signature="method#ThrownBack#0;class#ToolStormSurge#0" />
+                <element signature="e#5401#5402#0" expanded="true" />
+                <element signature="e#5428#5429#0" expanded="true" />
+                <element signature="e#5475#5476#0" expanded="true" />
+                <element signature="e#5520#5521#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/DamageListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -149,10 +156,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/TriggerInitalizer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="35" column="40" lean-forward="true" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/Utilities/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="135" column="23" selection-start-line="135" selection-start-column="23" selection-end-line="135" selection-end-column="23" />
+            <state relative-caret-position="691">
+              <caret line="135" column="29" lean-forward="true" selection-start-line="135" selection-start-column="29" selection-end-line="135" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#ConstructItemStack#0;class#Utils#0" />
@@ -188,7 +204,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/FoodMundusBerries.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/tasks/MundusReturnTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/FoodMundusRootExtract.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/tasks/CharmAirSphere.java" />
@@ -211,14 +226,8 @@
         <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/ScrollHome.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/Utilities/Interfaces/ITriggerRecieveDamage.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/Utilities/Interfaces/ITriggerRecieveDamageEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmIncorporeal.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmZephyr.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmPyroCloak.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmResurection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/DamageListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/Utilities/Interfaces/ITriggerConsume.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/FoodMundusRoots.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/FoodMundusExtract.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/FoodSilverFruit.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/FoodSilverJuice.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/PotionElixirOfLife.java" />
@@ -238,6 +247,13 @@
         <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/Utilities/Utils.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/tasks/StormSurgeUncool.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/AllimoreItems.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/TriggerInitalizer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/DamageListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmZephyr.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmIncorporeal.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmPyroCloak.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/FoodMundusExtract.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmResurection.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/allimore/tod/items/ToolStormSurge.java" />
       </list>
     </option>
@@ -251,8 +267,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1288" />
-    <option name="y" value="40" />
+    <option name="x" value="-1346" />
+    <option name="y" value="31" />
     <option name="width" value="1296" />
     <option name="height" value="1000" />
   </component>
@@ -306,6 +322,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tod" type="462c0819:PsiDirectoryNode" />
+              <item name="items" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Allimore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Allimore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tod" type="462c0819:PsiDirectoryNode" />
               <item name="Utilities" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -322,7 +347,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542179502187" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542190392726" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents/Spigot 1.13.2 Project/Paperclip.jar!/" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -423,7 +448,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1288" y="40" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
@@ -438,7 +462,7 @@
       <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.3290993" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.3290993" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.3290993" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -455,36 +479,6 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/ToolStormSurge.java</url>
-          <line>89</line>
-          <properties class="net.allimore.tod.items.ToolStormSurge" method="RunTrigger">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/ToolStormSurge.java</url>
-          <line>78</line>
-          <properties class="net.allimore.tod.items.ToolStormSurge" method="RunTrigger">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/ToolStormSurge.java</url>
-          <line>56</line>
-          <properties class="net.allimore.tod.items.ToolStormSurge" method="&lt;init&gt;">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Sleep/src/main/java/net/allimore/sleep/InteractListener.java" />
@@ -690,43 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmIncorporeal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="77" column="21" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmZephyr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="67" column="29" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmPyroCloak.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-810">
-          <caret line="48" column="28" lean-forward="true" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmResurection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="108" column="109" selection-start-line="108" selection-start-column="109" selection-end-line="108" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/Utilities/Interfaces/ITriggerConsume.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -745,18 +702,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#2774#2775#0" expanded="true" />
             <element signature="e#2801#2802#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/FoodMundusExtract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1649">
-          <caret line="97" column="48" lean-forward="true" selection-start-line="97" selection-start-column="48" selection-end-line="97" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4142#4143#0" expanded="true" />
-            <element signature="e#4169#4170#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -911,16 +856,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/Utilities/TriggerInitalizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="52" column="42" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/Utilities/Interfaces/ITriggerEntityInteract.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -958,20 +893,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/DamageListener.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/AllimoreItems.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        <state relative-caret-position="822">
+          <caret line="59" column="96" selection-start-line="59" selection-start-column="96" selection-end-line="59" selection-end-column="96" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/TriggerInitalizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="35" column="40" lean-forward="true" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/tasks/StormSurgeUncool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/DamageListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmZephyr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="59" column="64" selection-start-line="59" selection-start-column="64" selection-end-line="59" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmPyroCloak.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="132" column="64" selection-start-line="132" selection-start-column="64" selection-end-line="132" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/FoodMundusExtract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="115" column="64" selection-start-line="115" selection-start-column="64" selection-end-line="115" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4142#4143#0" expanded="true" />
+            <element signature="e#4169#4170#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmIncorporeal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="122" column="64" selection-start-line="122" selection-start-column="64" selection-end-line="122" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/CharmResurection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="106" column="64" selection-start-line="106" selection-start-column="64" selection-end-line="106" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/Utilities/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="135" column="23" selection-start-line="135" selection-start-column="23" selection-end-line="135" selection-end-column="23" />
+        <state relative-caret-position="691">
+          <caret line="135" column="29" lean-forward="true" selection-start-line="135" selection-start-column="29" selection-end-line="135" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#ConstructItemStack#0;class#Utils#0" />
@@ -990,41 +1001,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/tasks/StormSurgeUncool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/AllimoreItems.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="822">
-          <caret line="60" column="96" selection-start-line="60" selection-start-column="96" selection-end-line="60" selection-end-column="96" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/allimore/tod/items/ToolStormSurge.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="103" column="19" selection-start-line="103" selection-start-column="19" selection-end-line="103" selection-end-column="19" />
+        <state relative-caret-position="285">
+          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ToolStormSurge#0;class#ToolStormSurge#0" />
             <element signature="method#Create#0;class#ToolStormSurge#0" />
-            <element signature="method#RunTrigger#0;class#ToolStormSurge#0" />
+            <element signature="method#RunTrigger#1;class#ToolStormSurge#0" />
             <element signature="method#RunTrigger#2;class#ToolStormSurge#0" />
-            <element signature="e#5207#5208#0" expanded="true" />
-            <element signature="e#5234#5235#0" expanded="true" />
-            <element signature="e#5281#5282#0" expanded="true" />
-            <element signature="e#5326#5327#0" expanded="true" />
-            <element signature="method#ThrownBack#0;class#ToolStormSurge#0" />
+            <element signature="e#5401#5402#0" expanded="true" />
+            <element signature="e#5428#5429#0" expanded="true" />
+            <element signature="e#5475#5476#0" expanded="true" />
+            <element signature="e#5520#5521#0" expanded="true" />
           </folding>
         </state>
       </provider>

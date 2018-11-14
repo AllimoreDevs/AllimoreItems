@@ -120,6 +120,7 @@ public class CharmIncorporeal extends Charm implements ITriggerInteract, ITrigge
 
     @Override
     public void RunTrigger(EntityDamageEvent event) {
+        if(! (event.getEntity() instanceof Player) ) { return; }
         if( SPECTRAL_PLAYERS.contains((Player)event.getEntity()) ){
             event.setCancelled(true);
         }

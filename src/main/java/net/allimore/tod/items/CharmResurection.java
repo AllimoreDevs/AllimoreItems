@@ -104,6 +104,7 @@ public class CharmResurection extends Charm implements ITriggerRecieveDamage {
 
     @Override
     public void RunTrigger(EntityDamageEvent event){
+        if(! (event.getEntity() instanceof Player) ) { return; }
         Player player = (Player)event.getEntity();
 
         if(! super.ItemMatchOffHand(player) || (player.getHealth() - event.getFinalDamage() > 0)) { return; }

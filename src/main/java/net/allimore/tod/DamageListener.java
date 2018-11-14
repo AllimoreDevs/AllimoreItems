@@ -23,9 +23,6 @@ public class DamageListener implements Listener {
 
     @EventHandler
     public void OnEntityDamage(EntityDamageEvent event){
-        if( !(event.getEntity() instanceof Player) ){ return; }
-        Player player = (Player)event.getEntity();
-
         ArrayList<ITriggerRecieveDamage> triggers = Triggers.GetRecieveDamageTriggers();
         for(ITriggerRecieveDamage trigger : triggers){
             trigger.RunTrigger(event);

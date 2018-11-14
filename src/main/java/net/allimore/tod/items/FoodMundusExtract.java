@@ -113,6 +113,7 @@ public class FoodMundusExtract extends Charm implements ITriggerRecieveDamage, I
 
     @Override
     public void RunTrigger(EntityDamageEvent event) {
+        if(! (event.getEntity() instanceof Player) ) { return; }
         if (FoodMundusExtract.POISON_IMMUNE_PLAYERS.contains( (Player)event.getEntity() )){
             if(FoodMundusExtract.IsImmune(event.getCause())){
                 event.setCancelled(true);
