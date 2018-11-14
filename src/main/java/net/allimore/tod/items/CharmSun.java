@@ -2,15 +2,17 @@ package net.allimore.tod.items;
 
 import net.allimore.tod.*;
 import net.allimore.tod.Utilities.*;
+import net.allimore.tod.Utilities.Interfaces.ITriggerInteract;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.ArrayList;
 
-public class CharmSun {
+public class CharmSun extends Charm implements ITriggerInteract {
     public static String NAME = ChatColor.YELLOW + "Sun Charm";
     public static Material MATERIAL = Material.CLOCK;
 
@@ -23,6 +25,11 @@ public class CharmSun {
 
     private static SoundInfo USE_SOUND = CharmSounds.USE_SOUND;
     private static SoundInfo FAIL_SOUND = CharmSounds.FAIL_SOUND;
+
+    public CharmSun(){
+        super(NAME, MATERIAL);
+        Triggers.RegisterInteractTrigger(this);
+    }
 
     public static ItemStack CreateSunCharm(){
         ArrayList<String> lore = new ArrayList<String>() {{
@@ -64,7 +71,8 @@ public class CharmSun {
         Utils.UpdateUseLine(item, 0, uses);
     }
 
-    public static void RunCharm(PlayerInteractEvent event){
+    @Override
+    public void RunTrigger(PlayerInteractEvent event){
         Player player = event.getPlayer();
         if( !CanUse(player) ){ return; }
 
@@ -85,5 +93,15 @@ public class CharmSun {
                 UpdateCharmUsesString(player, event.getItem(), uses);
             }
         }
+    }
+
+    @Override
+    public Action GetAction() {
+        return Action.RIGHT_CLICK_AIR;
+    }
+
+    @Override
+    public Charm GetCharm(){
+        return this;
     }
 }

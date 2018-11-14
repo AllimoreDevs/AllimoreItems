@@ -3,18 +3,20 @@ package net.allimore.tod.items;
 import com.earth2me.essentials.commands.WarpNotFoundException;
 import net.allimore.tod.AllimoreItems;
 import net.allimore.tod.Utilities.*;
+import net.allimore.tod.Utilities.Interfaces.ITriggerInteract;
 import net.ess3.api.InvalidWorldException;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.ArrayList;
 
-public class CharmWarp {
+public class CharmWarp extends Charm implements ITriggerInteract {
     public static String NAME = ChatColor.BLUE + "☸ Warp Charm ☸";
     public static Material MATERIAL = Material.QUARTZ;
 
@@ -29,6 +31,11 @@ public class CharmWarp {
 
     public static SoundInfo USE_SOUND = CharmSounds.USE_SOUND;
     public static SoundInfo FAIL_SOUND = CharmSounds.FAIL_SOUND;
+
+    public CharmWarp(){
+        super(NAME, MATERIAL);
+        Triggers.RegisterInteractTrigger(this);
+    }
 
     public static ItemStack Create(String warpName){
 
@@ -59,7 +66,8 @@ public class CharmWarp {
         return lore.get(1).substring(2);
     }
 
-    public static void Run(PlayerInteractEvent event){
+    @Override
+    public void RunTrigger(PlayerInteractEvent event){
         event.setCancelled(false);
 
         ItemStack item = event.getItem();
@@ -95,5 +103,15 @@ public class CharmWarp {
             player.sendMessage(FAIL_STRING);
             return;
         }
+    }
+
+    @Override
+    public Charm GetCharm() {
+        return this;
+    }
+
+    @Override
+    public Action GetAction() {
+        return Action.RIGHT_CLICK_AIR;
     }
 }

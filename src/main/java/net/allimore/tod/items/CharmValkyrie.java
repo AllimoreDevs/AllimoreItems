@@ -4,13 +4,12 @@ package net.allimore.tod.items;
 import com.palmergames.bukkit.towny.Towny;
 import com.palmergames.bukkit.towny.exceptions.NotRegisteredException;
 import com.palmergames.bukkit.towny.object.*;
-import net.allimore.tod.Utilities.CharmLang;
-import net.allimore.tod.Utilities.CharmSounds;
-import net.allimore.tod.Utilities.SoundInfo;
-import net.allimore.tod.Utilities.Utils;
+import net.allimore.tod.Utilities.*;
+import net.allimore.tod.Utilities.Interfaces.ITriggerInteract;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 
@@ -18,7 +17,7 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
 
-public class CharmValkyrie {
+public class CharmValkyrie extends Charm implements ITriggerInteract {
     public static String NAME = String.format("%sValkyrie %sStone", ChatColor.AQUA, ChatColor.WHITE);
     public static Material MATERIAL = Material.QUARTZ;
 
@@ -44,6 +43,11 @@ public class CharmValkyrie {
     private static SoundInfo FAIL_SOUND = CharmSounds.FAIL_SOUND;
 
     public static Hashtable<String, Player> FLYING_PLAYERS = new Hashtable<>();
+
+    public CharmValkyrie(){
+        super(NAME, MATERIAL);
+        Triggers.RegisterInteractTrigger(this);
+    }
 
     public static ItemStack Create(){
         ArrayList<String> lore = new ArrayList<String>() {{
@@ -150,13 +154,26 @@ public class CharmValkyrie {
         }
     }
 
-    public static void Run(Player player){
+    @Override
+    public void RunTrigger(PlayerInteractEvent event){
+        Player player = event.getPlayer();
         Resident resident = GetResident(player);
         Town town = GetPlayerTown(resident, player);
 
         if (! IsInOwnTown(player, town)) { return; }
 
         ToggleFlight(player);
-
     }
+
+    @Override
+    public Charm GetCharm() {
+        return this;
+    }
+
+    @Override
+    public Action GetAction() {
+        return Action.RIGHT_CLICK_AIR;
+    }
+
+
 }

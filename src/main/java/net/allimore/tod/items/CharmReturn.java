@@ -2,15 +2,17 @@ package net.allimore.tod.items;
 
 import net.allimore.tod.*;
 import net.allimore.tod.Utilities.*;
+import net.allimore.tod.Utilities.Interfaces.ITriggerInteract;
 import org.bukkit.*;
 import org.bukkit.entity.Player;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.ArrayList;
 
-public class CharmReturn {
+public class CharmReturn extends Charm implements ITriggerInteract {
     public static String NAME = ChatColor.LIGHT_PURPLE + "Charm of Return";
     public static Material MATERIAL = Material.FIREWORK_STAR;
 
@@ -25,6 +27,11 @@ public class CharmReturn {
 
     private static SoundInfo USE_SOUND = CharmSounds.USE_SOUND;
     private static SoundInfo SAVE_SOUND = CharmSounds.FAIL_SOUND;
+
+    public CharmReturn(){
+        super(NAME, MATERIAL);
+        Triggers.RegisterInteractTrigger(this);
+    }
 
     public static ItemStack CreateCharm(){
         ArrayList<String> lore = new ArrayList<String>(){{ add(LORE); }};
@@ -77,7 +84,8 @@ public class CharmReturn {
         player.teleport(location);
     }
 
-    public static void RunCharm(PlayerInteractEvent event){
+    @Override
+    public void RunTrigger(PlayerInteractEvent event){
         event.setCancelled(true);
 
         Player player = event.getPlayer();
@@ -114,4 +122,15 @@ public class CharmReturn {
             }
         }
     }
+
+    @Override
+    public Charm GetCharm() {
+        return this;
+    }
+
+    @Override
+    public Action GetAction() {
+        return Action.RIGHT_CLICK_AIR;
+    }
+
 }

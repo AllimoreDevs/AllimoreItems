@@ -118,11 +118,6 @@ commands:
     usage: /valkyriecharm
     permission: allimore.valkyriecharm
 
-  valkyrie:
-    description: Toggles flight if you are in your own town.
-    usage: /valkyrie
-    permission:  allimore.valkyrie
-
   allimoreBreaker:
     description: Gives you an Allimore Breaker Pick
     usage: /allimoreBreaker

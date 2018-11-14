@@ -2,10 +2,13 @@ package net.allimore.tod.items;
 
 import net.allimore.tod.AllimoreItems;
 import net.allimore.tod.Utilities.*;
+import net.allimore.tod.Utilities.Interfaces.ITriggerInteract;
+import net.allimore.tod.Utilities.Interfaces.ITriggerRecieveDamage;
 import net.allimore.tod.items.tasks.PyroReturnTask;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
@@ -14,7 +17,7 @@ import org.bukkit.scheduler.BukkitTask;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
-public class CharmPyroCloak {
+public class CharmPyroCloak extends Charm implements ITriggerInteract, ITriggerRecieveDamage {
     public static String NAME = ChatColor.DARK_RED + "Pyromancer's Cloak";
     public static Material MATERIAL = Material.BLAZE_POWDER;
 
@@ -42,6 +45,12 @@ public class CharmPyroCloak {
 
     public static Hashtable<String, Player> FIRE_IMMUNE_PLAYERS = new Hashtable<>();
     private static int TICK_DURRATION = 1200;
+
+    public CharmPyroCloak(){
+        super(NAME, MATERIAL);
+        Triggers.RegisterInteractTrigger(this);
+        Triggers.RegisterRecieveDamageTrigger(this);
+    }
 
     public static ItemStack Create(){
         ArrayList<String> lore = new ArrayList<String>(){{
@@ -75,7 +84,8 @@ public class CharmPyroCloak {
         return false;
     }
 
-    public static void Run(PlayerInteractEvent event){
+    @Override
+    public void RunTrigger(PlayerInteractEvent event){
         Player player = event.getPlayer();
         ItemStack item = event.getItem();
 
@@ -104,6 +114,25 @@ public class CharmPyroCloak {
                 Utils.SplitOffCharmStackMain(player, Create(), info);
             }else{
                 Utils.UpdateUseLine(item,4, uses);
+            }
+        }
+    }
+
+    @Override
+    public Charm GetCharm() {
+        return this;
+    }
+
+    @Override
+    public Action GetAction() {
+        return Action.RIGHT_CLICK_AIR;
+    }
+
+    @Override
+    public void RunTrigger(EntityDamageEvent event) {
+        if (CharmPyroCloak.FIRE_IMMUNE_PLAYERS.contains( (Player)event.getEntity() )){
+            if(CharmPyroCloak.ImuneTo(event.getCause())){
+                event.setCancelled(true);
             }
         }
     }

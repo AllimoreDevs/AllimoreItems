@@ -2,15 +2,17 @@ package net.allimore.tod.items;
 
 import net.allimore.tod.*;
 import net.allimore.tod.Utilities.*;
+import net.allimore.tod.Utilities.Interfaces.ITriggerInteract;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.ArrayList;
 
-public class CharmRain {
+public class CharmRain extends Charm implements ITriggerInteract {
     public static String NAME = ChatColor.BLUE + "Charm of Rain";
     public static Material MATERIAL = Material.LAPIS_LAZULI;
 
@@ -25,6 +27,11 @@ public class CharmRain {
 
     private static SoundInfo USE_SOUND = CharmSounds.USE_SOUND;
     private static SoundInfo FAIL_SOUND = CharmSounds.FAIL_SOUND;
+
+    public CharmRain(){
+        super(NAME, MATERIAL);
+        Triggers.RegisterInteractTrigger(this);
+    }
 
     public static ItemStack CreateRainCharm(){
         ArrayList<String> lore = new ArrayList<String>() {{
@@ -63,7 +70,8 @@ public class CharmRain {
         Utils.UpdateUseLine(event.getItem(), 0, uses);
     }
 
-    public static void RunCharm(PlayerInteractEvent event){
+    @Override
+    public void RunTrigger(PlayerInteractEvent event){
         Player player = event.getPlayer();
 
         if(! IsNotRaining(player) ) { return; }
@@ -84,5 +92,15 @@ public class CharmRain {
                 UpdateCharmUsesString(player, event, uses);
             }
         }
+    }
+
+    @Override
+    public Charm GetCharm() {
+        return this;
+    }
+
+    @Override
+    public Action GetAction() {
+        return Action.RIGHT_CLICK_AIR;
     }
 }

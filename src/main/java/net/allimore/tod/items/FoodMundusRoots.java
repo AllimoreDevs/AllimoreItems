@@ -1,12 +1,10 @@
 package net.allimore.tod.items;
 
-import net.allimore.tod.Utilities.CharmLang;
-import net.allimore.tod.Utilities.CharmUseInfo;
-import net.allimore.tod.Utilities.Utils;
+import net.allimore.tod.Utilities.*;
+import net.allimore.tod.Utilities.Interfaces.ITriggerConsume;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
-import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerItemConsumeEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
@@ -14,7 +12,7 @@ import org.bukkit.potion.PotionEffect;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class FoodMundusRoots {
+public class FoodMundusRoots extends Charm implements ITriggerConsume {
     public static String NAME = ChatColor.GOLD + "Mundus Roots";
     public static Material MATERIAL = Material.CARROT;
 
@@ -30,6 +28,11 @@ public class FoodMundusRoots {
     private static String CONSUME_STRING =
             CharmLang.NEGATIVE_COLOR + "You've finished off the last of the Mundus Roots.";
 
+    public FoodMundusRoots(){
+        super(NAME, MATERIAL);
+        Triggers.RegisterConsumeTrigger(this);
+    }
+
     public static ItemStack Create(){
         ArrayList<String> lore = new ArrayList<String>() {{
             add(LORE1);
@@ -40,7 +43,8 @@ public class FoodMundusRoots {
         return Utils.ConstructItemStack(NAME, MATERIAL, lore);
     }
 
-    public static void Run(PlayerItemConsumeEvent event){
+    @Override
+    public void RunTrigger(PlayerItemConsumeEvent event){
         event.setCancelled(true);
 
         Player player = event.getPlayer();
@@ -71,6 +75,11 @@ public class FoodMundusRoots {
                 return;
             }
         }
+    }
+
+    @Override
+    public Charm GetCharm() {
+        return this;
     }
 
 }

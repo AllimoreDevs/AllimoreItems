@@ -1,12 +1,16 @@
 package net.allimore.tod.Utilities;
 
+import net.allimore.tod.Utilities.Interfaces.*;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
+
+import java.util.ArrayList;
 
 public class Triggers {
     public enum TRIGGERS {
         LEFT_CLICK,
         RIGHT_CLICK,
+        SHIFT_RIGHT_CLICK,
         TAKE_DAMAGE,
         TAKE_DAMAGE_ENTITY,
         DEAL_DAMAGE,
@@ -24,6 +28,7 @@ public class Triggers {
 
     public static TYPES[] LEFT_CLICK_COMPAT = new TYPES[]{ TYPES.SWORD, TYPES.TOOL, TYPES.BOW };
     public static TYPES[] RIGHT_CLICK_COMPAT = new TYPES[]{ TYPES.SWORD, TYPES.TOOL, TYPES.BOW };
+    public static TYPES[] SHIFT_RIGHT_CLICK_COMPAT = new TYPES[]{ TYPES.SWORD, TYPES.TOOL, TYPES.BOW };
     public static TYPES[] TAKE_DAMAGE_COMPAT = new TYPES[]{ TYPES.ARMOR, TYPES.SWORD, TYPES.BOW };
     public static TYPES[] TAKE_DAMAGE_ENTITY_COMPAT = new TYPES[] {TYPES.ARMOR, TYPES.SWORD, TYPES.BOW};
     public static TYPES DEAL_DAMAGE_COMPAT = TYPES.SWORD;
@@ -93,5 +98,55 @@ public class Triggers {
                 return true;
         }
         return false;
+    }
+
+    private static ArrayList<ITriggerInteract> Inteact_Triggers = new ArrayList<>();
+    private static ArrayList<ITriggerRecieveDamage> Recieve_Damage_Triggers = new ArrayList<>();
+    private static ArrayList<ITriggerRecieveDamageEntity> Recieve_Damage_Entity_Triggers = new ArrayList<>();
+    private static ArrayList<ITriggerBlockBreak> Block_Break_Triggers = new ArrayList<>();
+    private static ArrayList<ITriggerConsume> Consume_Triggers = new ArrayList<>();
+    private static ArrayList<ITriggerEntityInteract> Entity_Interact_Triggers = new ArrayList<>();
+
+    public static ArrayList<ITriggerInteract> GetInteractTriggers(){
+        return Inteact_Triggers;
+    }
+    public static ArrayList<ITriggerRecieveDamage> GetRecieveDamageTriggers(){
+        return Recieve_Damage_Triggers;
+    }
+    public static ArrayList<ITriggerRecieveDamageEntity> GetRecieveDamageEntityTriggers(){
+        return Recieve_Damage_Entity_Triggers;
+    }
+    public static ArrayList<ITriggerBlockBreak> GetBlockBreakTriggers(){
+        return Block_Break_Triggers;
+    }
+    public static ArrayList<ITriggerConsume> GetConsumeTriggers(){
+        return  Consume_Triggers;
+    }
+    public static ArrayList<ITriggerEntityInteract> GetEntityInteractTriggers(){
+        return Entity_Interact_Triggers;
+    }
+
+    public static void RegisterInteractTrigger(ITriggerInteract trigger){
+        Inteact_Triggers.add(trigger);
+    }
+
+    public static void RegisterRecieveDamageTrigger(ITriggerRecieveDamage trigger){
+        Recieve_Damage_Triggers.add(trigger);
+    }
+
+    public static void RegisterRecieveDamageEntityTrigger(ITriggerRecieveDamageEntity trigger){
+        Recieve_Damage_Entity_Triggers.add(trigger);
+    }
+
+    public static void RegisterBlockBreakTrigger(ITriggerBlockBreak trigger){
+        Block_Break_Triggers.add(trigger);
+    }
+
+    public static void RegisterConsumeTrigger(ITriggerConsume trigger){
+        Consume_Triggers.add(trigger);
+    }
+
+    public static void RegisterEntityInteractTrigger(ITriggerEntityInteract trigger){
+        Entity_Interact_Triggers.add(trigger);
     }
 }

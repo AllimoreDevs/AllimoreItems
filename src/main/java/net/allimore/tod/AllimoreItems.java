@@ -1,6 +1,7 @@
 package net.allimore.tod;
 
 import com.earth2me.essentials.Essentials;
+import net.allimore.tod.Utilities.TriggerInitalizer;
 import net.allimore.tod.items.CharmValkyrie;
 import org.bukkit.Server;
 import org.bukkit.plugin.Plugin;
@@ -46,6 +47,8 @@ public final class AllimoreItems extends JavaPlugin {
         getServer().getPluginManager().registerEvents(craftListener, this);
 
         ESSENTIALS = (Essentials)getServer().getPluginManager().getPlugin("Essentials");
+
+        TriggerInitalizer.InitTriggers();
     }
 
     @Override

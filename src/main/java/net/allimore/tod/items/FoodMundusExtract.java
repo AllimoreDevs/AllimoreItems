@@ -1,10 +1,9 @@
 package net.allimore.tod.items;
 
 import net.allimore.tod.AllimoreItems;
-import net.allimore.tod.Utilities.CharmLang;
-import net.allimore.tod.Utilities.CharmSounds;
-import net.allimore.tod.Utilities.SoundInfo;
-import net.allimore.tod.Utilities.Utils;
+import net.allimore.tod.Utilities.*;
+import net.allimore.tod.Utilities.Interfaces.ITriggerConsume;
+import net.allimore.tod.Utilities.Interfaces.ITriggerRecieveDamage;
 import net.allimore.tod.items.tasks.MundusReturnTask;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -17,7 +16,7 @@ import org.bukkit.scheduler.BukkitTask;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
-public class FoodMundusExtract {
+public class FoodMundusExtract extends Charm implements ITriggerRecieveDamage, ITriggerConsume {
     public static String NAME = ChatColor.GOLD + "Mundus Root Extract";
     public static Material MATERIAL = Material.POTION;
     private static short SUB_ID = 8195;
@@ -44,6 +43,12 @@ public class FoodMundusExtract {
 
     public static Hashtable<String, Player> POISON_IMMUNE_PLAYERS = new Hashtable<>();
     private static int TICK_DURRATION = 1200;
+
+    public FoodMundusExtract(){
+        super(NAME, MATERIAL);
+        Triggers.RegisterConsumeTrigger(this);
+        Triggers.RegisterRecieveDamageTrigger(this);
+    }
 
     public static ItemStack Create(){
         ArrayList<String> lore = new ArrayList<String>() {{
@@ -73,7 +78,8 @@ public class FoodMundusExtract {
         END_SOUND.PlaySound(player);
     }
 
-    public static void Run(PlayerItemConsumeEvent event){
+    @Override
+    public void RunTrigger(PlayerItemConsumeEvent event){
         event.setCancelled(true);
         Player player = event.getPlayer();
         ItemStack item = event.getItem();
@@ -97,6 +103,20 @@ public class FoodMundusExtract {
         }else{
             player.sendMessage(WEAKEN_STRING);
             Utils.UpdateUseLine(item, 2, uses);
+        }
+    }
+
+    @Override
+    public Charm GetCharm() {
+        return this;
+    }
+
+    @Override
+    public void RunTrigger(EntityDamageEvent event) {
+        if (FoodMundusExtract.POISON_IMMUNE_PLAYERS.contains( (Player)event.getEntity() )){
+            if(FoodMundusExtract.IsImmune(event.getCause())){
+                event.setCancelled(true);
+            }
         }
     }
 }

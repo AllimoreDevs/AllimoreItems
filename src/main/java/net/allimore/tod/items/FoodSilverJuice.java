@@ -1,6 +1,9 @@
 package net.allimore.tod.items;
 
+import net.allimore.tod.Utilities.Charm;
 import net.allimore.tod.Utilities.CharmLang;
+import net.allimore.tod.Utilities.Interfaces.ITriggerConsume;
+import net.allimore.tod.Utilities.Triggers;
 import net.allimore.tod.Utilities.Utils;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -12,7 +15,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.ArrayList;
 
-public class FoodSilverJuice {
+public class FoodSilverJuice extends Charm implements ITriggerConsume {
     public static String NAME = ChatColor.GRAY + "Silver Fruit Juice";
     public static Material MATERIAL = Material.POTION;
     private static short SUB_ID = 8206;
@@ -29,6 +32,11 @@ public class FoodSilverJuice {
     private static String CONSUME_STRING =
             CharmLang.NEGATIVE_COLOR + "To your disappointment the bottle is now empty.";
 
+    public FoodSilverJuice(){
+        super(NAME, MATERIAL);
+        Triggers.RegisterConsumeTrigger(this);
+    }
+
     public static ItemStack CreateSilverJuice(){
         ArrayList<String> lore = new ArrayList<String>() {{
             add(LORE1);
@@ -44,7 +52,8 @@ public class FoodSilverJuice {
         return item;
     }
 
-    public static void Run(PlayerItemConsumeEvent event){
+    @Override
+    public void RunTrigger(PlayerItemConsumeEvent event){
         event.setCancelled(true);
 
         Player player = event.getPlayer();
@@ -63,5 +72,10 @@ public class FoodSilverJuice {
             ItemStack newItem = Utils.UpdateUseLine(event.getItem(), 2, uses);
             player.getInventory().setItemInMainHand(newItem);
         }
+    }
+
+    @Override
+    public Charm GetCharm() {
+        return this;
     }
 }

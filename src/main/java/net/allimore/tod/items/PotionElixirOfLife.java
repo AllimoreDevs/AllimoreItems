@@ -1,9 +1,7 @@
 package net.allimore.tod.items;
 
-import net.allimore.tod.Utilities.CharmLang;
-import net.allimore.tod.Utilities.CharmSounds;
-import net.allimore.tod.Utilities.SoundInfo;
-import net.allimore.tod.Utilities.Utils;
+import net.allimore.tod.Utilities.*;
+import net.allimore.tod.Utilities.Interfaces.ITriggerConsume;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
@@ -17,7 +15,7 @@ import org.bukkit.potion.PotionEffectType;
 
 import java.util.ArrayList;
 
-public class PotionElixirOfLife {
+public class PotionElixirOfLife extends Charm implements ITriggerConsume {
     public static String NAME = ChatColor.DARK_RED + "Elixir of Life";
     public static Material MATERIAL = Material.POTION;
     private static short SUB_ID = 8197;
@@ -31,6 +29,11 @@ public class PotionElixirOfLife {
             CharmLang.NEGATIVE_COLOR + "You cast aside the now devoid bottle and ready yourself!";
 
     private static SoundInfo USE_SOUND = CharmSounds.USE_SOUND;
+
+    public PotionElixirOfLife(){
+        super(NAME, MATERIAL);
+        Triggers.RegisterConsumeTrigger(this);
+    }
 
     public static ItemStack CreateElixir(){
         ItemStack elixir = new ItemStack(MATERIAL, 1);
@@ -47,7 +50,8 @@ public class PotionElixirOfLife {
         return elixir;
     }
 
-    public static void RunPotion(PlayerItemConsumeEvent event){
+    @Override
+    public void RunTrigger(PlayerItemConsumeEvent event){
         Player player = event.getPlayer();
         ItemStack potion = event.getItem();
 
@@ -62,5 +66,10 @@ public class PotionElixirOfLife {
         player.sendMessage(CONSUME_STRING);
         Utils.ConsumeFromMainHand(player);
         event.setCancelled(true);
+    }
+
+    @Override
+    public Charm GetCharm() {
+        return this;
     }
 }

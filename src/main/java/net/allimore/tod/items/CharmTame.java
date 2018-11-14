@@ -1,8 +1,7 @@
 package net.allimore.tod.items;
 
-import net.allimore.tod.Utilities.CharmSounds;
-import net.allimore.tod.Utilities.SoundInfo;
-import net.allimore.tod.Utilities.Utils;
+import net.allimore.tod.Utilities.*;
+import net.allimore.tod.Utilities.Interfaces.ITriggerEntityInteract;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Horse;
@@ -12,7 +11,7 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.ArrayList;
 
-public class CharmTame {
+public class CharmTame extends Charm implements ITriggerEntityInteract {
     public static String NAME = ChatColor.GOLD + "Charm of Taming";
     public static Material MATERIAL = Material.EMERALD;
 
@@ -27,6 +26,11 @@ public class CharmTame {
 
     private static SoundInfo USE_SOUND = CharmSounds.USE_SOUND;
     private static SoundInfo FAIL_SOUND = CharmSounds.FAIL_SOUND;
+
+    public CharmTame(){
+        super(NAME, MATERIAL);
+        Triggers.RegisterEntityInteractTrigger(this);
+    }
 
     public static ItemStack CreateTameCharm(){
         ArrayList<String> lore = new ArrayList<String>() {{ add(LORE_STRING); }};
@@ -64,8 +68,10 @@ public class CharmTame {
         return true;
     }
 
-    public static void RunCharm(PlayerInteractEntityEvent event){
+    @Override
+    public void RunTrigger(PlayerInteractEntityEvent event){
         Player player = event.getPlayer();
+        if(player.getInventory().getItemInMainHand() == null || ! super.ItemMatch(player.getInventory().getItemInMainHand()) ) { return; }
         if(!IsHorse(event, player)) { return;}
 
         Horse horse = (Horse)event.getRightClicked();

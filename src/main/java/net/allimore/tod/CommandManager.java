@@ -48,7 +48,6 @@ public class CommandManager implements CommandExecutor
         plugin.getCommand("mundusRoots").setExecutor(this);
         plugin.getCommand("mundusExtract").setExecutor(this);
         plugin.getCommand("valkyrieCharm").setExecutor(this);
-        plugin.getCommand("valkyrie").setExecutor(this);
         plugin.getCommand("allimoreBreaker").setExecutor(this);
     }
 
@@ -144,12 +143,6 @@ public class CommandManager implements CommandExecutor
         }
         if (command.getName().equalsIgnoreCase("valkyriecharm")){
             GivePlayerItem(sender, CharmValkyrie.Create());
-            return true;
-        }
-        if (command.getName().equalsIgnoreCase("valkyrie")){
-            if(! IsPlayer(sender)) { return true; }
-            Player player = (Player)sender;
-            CharmValkyrie.Run(player);
             return true;
         }
         if (command.getName().equalsIgnoreCase("allimoreBreaker")){

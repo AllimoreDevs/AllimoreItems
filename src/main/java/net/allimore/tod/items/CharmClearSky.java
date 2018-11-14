@@ -2,15 +2,17 @@ package net.allimore.tod.items;
 
 import net.allimore.tod.*;
 import net.allimore.tod.Utilities.*;
+import net.allimore.tod.Utilities.Interfaces.ITriggerInteract;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.ArrayList;
 
-public class CharmClearSky {
+public class CharmClearSky extends Charm implements ITriggerInteract {
     public static String NAME = ChatColor.AQUA + "Charm of the Clear Skies";
     public static Material MATERIAL = Material.LIGHT_BLUE_DYE;
 
@@ -25,6 +27,11 @@ public class CharmClearSky {
 
     private static SoundInfo USE_SOUND = CharmSounds.USE_SOUND;
     private static SoundInfo FAIL_SOUND = CharmSounds.FAIL_SOUND;
+
+    public CharmClearSky(){
+        super(NAME, MATERIAL);
+        Triggers.RegisterInteractTrigger(this);
+    }
 
     public static ItemStack CreateClearSkiesCharm(){
         ArrayList<String> lore = new ArrayList<String>() {{
@@ -63,7 +70,8 @@ public class CharmClearSky {
         Utils.UpdateUseLine(event.getItem(), 0, uses);
     }
 
-    public static void RunCharm(PlayerInteractEvent event){
+    @Override
+    public void RunTrigger(PlayerInteractEvent event){
         Player player = event.getPlayer();
 
         if(! IsRaining(player) ) { return; }
@@ -84,5 +92,15 @@ public class CharmClearSky {
                 UpdateCharmUsesString(player, event, uses);
             }
         }
+    }
+
+    @Override
+    public Charm GetCharm() {
+        return this;
+    }
+
+    @Override
+    public Action GetAction() {
+        return Action.RIGHT_CLICK_AIR;
     }
 }

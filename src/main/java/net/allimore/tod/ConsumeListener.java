@@ -1,11 +1,15 @@
 package net.allimore.tod;
 
+import net.allimore.tod.Utilities.Interfaces.ITriggerConsume;
+import net.allimore.tod.Utilities.Triggers;
 import net.allimore.tod.Utilities.Utils;
 import net.allimore.tod.items.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerItemConsumeEvent;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.ArrayList;
 
 public class ConsumeListener implements Listener {
 
@@ -17,29 +21,12 @@ public class ConsumeListener implements Listener {
     public void OnPlayerConsume (PlayerItemConsumeEvent event){
         if( HandleSpectral(event) ){ return; }
 
-        if(Utils.ItemsMatch(event.getItem(), PotionElixirOfLife.MATERIAL, PotionElixirOfLife.NAME)){
-            PotionElixirOfLife.RunPotion(event);
-            return;
-        }
-        if(Utils.ItemsMatch(event.getItem(), PotionPhilterOfLife.MATERIAL, PotionPhilterOfLife.NAME)){
-            PotionPhilterOfLife.RunPotion(event);
-            return;
-        }
-        if(Utils.ItemsMatch(event.getItem(), FoodSilverFruit.MATERIAL, FoodSilverFruit.NAME)){
-            FoodSilverFruit.RunFood(event);
-            return;
-        }
-        if(Utils.ItemsMatch(event.getItem(), FoodSilverJuice.MATERIAL, FoodSilverJuice.NAME)){
-            FoodSilverJuice.Run(event);
-            return;
-        }
-        if(Utils.ItemsMatch(event.getItem(), FoodMundusRoots.MATERIAL, FoodMundusRoots.NAME)) {
-            FoodMundusRoots.Run(event);
-            return;
-        }
-        if(Utils.ItemsMatch(event.getItem(), FoodMundusExtract.MATERIAL, FoodMundusExtract.NAME)) {
-            FoodMundusExtract.Run(event);
-            return;
+        ArrayList<ITriggerConsume> triggers = Triggers.GetConsumeTriggers();
+        for(ITriggerConsume trigger : triggers){
+            if(trigger.GetCharm().ItemMatch(event.getItem())){
+                trigger.RunTrigger(event);
+                if(event.isCancelled()) { return; }
+            }
         }
     }
 

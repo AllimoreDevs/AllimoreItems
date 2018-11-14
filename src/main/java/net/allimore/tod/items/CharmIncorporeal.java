@@ -2,10 +2,16 @@ package net.allimore.tod.items;
 
 import net.allimore.tod.AllimoreItems;
 import net.allimore.tod.Utilities.*;
+import net.allimore.tod.Utilities.Interfaces.ITriggerInteract;
+import net.allimore.tod.Utilities.Interfaces.ITriggerRecieveDamage;
+import net.allimore.tod.Utilities.Interfaces.ITriggerRecieveDamageEntity;
 import net.allimore.tod.items.tasks.IncorpReturnTask;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.event.block.Action;
+import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitTask;
@@ -13,7 +19,7 @@ import org.bukkit.scheduler.BukkitTask;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
-public class CharmIncorporeal {
+public class CharmIncorporeal extends Charm implements ITriggerInteract, ITriggerRecieveDamage, ITriggerRecieveDamageEntity {
     public static String NAME = ChatColor.GRAY + "Incorporeal Pendant.";
     public static Material MATERIAL = Material.QUARTZ;
 
@@ -39,6 +45,13 @@ public class CharmIncorporeal {
     public static Hashtable<String, Player> SPECTRAL_PLAYERS = new Hashtable<String, Player>();
     private static int TICK_DURRATION = 200;
 
+    public CharmIncorporeal(){
+        super(NAME, MATERIAL);
+        Triggers.RegisterInteractTrigger(this);
+        Triggers.RegisterRecieveDamageTrigger(this);
+        Triggers.RegisterRecieveDamageEntityTrigger(this);
+    }
+
     public static ItemStack Create(){
         ArrayList<String> lore = new ArrayList<String>() {{
             add(LORE1);
@@ -56,7 +69,17 @@ public class CharmIncorporeal {
         END_SOUND.PlaySound(player);
     }
 
-    public static void Run(PlayerInteractEvent event){
+    public static boolean HandleInteractCancel(PlayerInteractEvent event){
+        if( CharmIncorporeal.SPECTRAL_PLAYERS.contains(event.getPlayer()) ){
+            event.setCancelled(true);
+            event.getPlayer().sendMessage(CharmIncorporeal.CANT_INTERACT);
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public void RunTrigger(PlayerInteractEvent event){
         event.setCancelled(true);
 
         Player player = event.getPlayer();
@@ -82,6 +105,30 @@ public class CharmIncorporeal {
             }else{
                 Utils.UpdateUseLine(item, 2, uses);
             }
+        }
+    }
+
+    @Override
+    public Charm GetCharm() {
+        return this;
+    }
+
+    @Override
+    public Action GetAction() {
+        return Action.RIGHT_CLICK_AIR;
+    }
+
+    @Override
+    public void RunTrigger(EntityDamageEvent event) {
+        if( SPECTRAL_PLAYERS.contains((Player)event.getEntity()) ){
+            event.setCancelled(true);
+        }
+    }
+
+    @Override
+    public void RunTrigger(EntityDamageByEntityEvent event) {
+        if( CharmIncorporeal.SPECTRAL_PLAYERS.contains(event.getDamager())){
+            event.setCancelled(true);
         }
     }
 }

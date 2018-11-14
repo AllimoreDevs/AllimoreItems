@@ -4,10 +4,8 @@ import com.palmergames.bukkit.towny.Towny;
 import com.palmergames.bukkit.towny.exceptions.TownyException;
 import com.palmergames.bukkit.towny.object.Resident;
 import net.allimore.tod.*;
-import net.allimore.tod.Utilities.CharmLang;
-import net.allimore.tod.Utilities.CharmSounds;
-import net.allimore.tod.Utilities.SoundInfo;
-import net.allimore.tod.Utilities.Utils;
+import net.allimore.tod.Utilities.*;
+import net.allimore.tod.Utilities.Interfaces.ITriggerRecieveDamage;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -19,7 +17,7 @@ import org.bukkit.inventory.ItemStack;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
-public class CharmResurection {
+public class CharmResurection extends Charm implements ITriggerRecieveDamage {
     public static String NAME = ChatColor.DARK_RED + "Resurrection Charm";
     public static Material MATERIAL = Material.TOTEM_OF_UNDYING;
 
@@ -36,6 +34,11 @@ public class CharmResurection {
             CharmLang.NEGATIVE_COLOR + "Your charms bursts into an explosion of light leaving naught a trace behind.";
 
     private static SoundInfo USE_SOUND = CharmSounds.USE_SOUND;
+
+    public CharmResurection(){
+        super(NAME, MATERIAL);
+        Triggers.RegisterRecieveDamageTrigger(this);
+    }
 
     public static ItemStack CreateCharmResurrection(){
         ArrayList<String> lore = new ArrayList<String>() {{ add(LORE1); add(LORE2); }};
@@ -99,8 +102,11 @@ public class CharmResurection {
         player.setHealth(maxHealth);
     }
 
-    public static void RunCharm(EntityDamageEvent event){
+    @Override
+    public void RunTrigger(EntityDamageEvent event){
         Player player = (Player)event.getEntity();
+
+        if(! super.ItemMatchOffHand(player) || (player.getHealth() - event.getFinalDamage() > 0)) { return; }
 
         event.setCancelled(true);
         UseCharm(player);

@@ -1,6 +1,9 @@
 package net.allimore.tod.items;
 
+import net.allimore.tod.Utilities.Charm;
 import net.allimore.tod.Utilities.CharmLang;
+import net.allimore.tod.Utilities.Interfaces.ITriggerBlockBreak;
+import net.allimore.tod.Utilities.Triggers;
 import net.allimore.tod.Utilities.Utils;
 import org.bukkit.ChatColor;
 import org.bukkit.Effect;
@@ -13,7 +16,7 @@ import org.bukkit.potion.PotionEffectType;
 
 import java.util.ArrayList;
 
-public class ToolAllimoreBreaker {
+public class ToolAllimoreBreaker extends Charm implements ITriggerBlockBreak {
     public static String NAME = String.format("%sAllimore %sBreaker", ChatColor.BLUE, ChatColor.GREEN);
     public static Material MATERIAL = Material.DIAMOND_PICKAXE;
 
@@ -31,6 +34,11 @@ public class ToolAllimoreBreaker {
 
     private static PotionEffect EFFECT = new PotionEffect(PotionEffectType.FAST_DIGGING, 10, 2);
 
+    public ToolAllimoreBreaker(){
+        super(NAME, MATERIAL);
+        Triggers.RegisterBlockBreakTrigger(this);
+    }
+
     public static ItemStack Create(){
         ArrayList<String> lore = new ArrayList<String>(){{
             add(LORE1);
@@ -44,12 +52,18 @@ public class ToolAllimoreBreaker {
         return stack;
     }
 
-    public static void Run(BlockBreakEvent event){
+    @Override
+    public void RunTrigger(BlockBreakEvent event){
         double chance = Math.random();
 
         if(chance > 1 - ACTIVATION_CHANCE){
             event.getPlayer().addPotionEffect(EFFECT);
         }
 
+    }
+
+    @Override
+    public Charm GetCharm() {
+        return this;
     }
 }

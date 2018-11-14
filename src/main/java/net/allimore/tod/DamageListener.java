@@ -1,5 +1,8 @@
 package net.allimore.tod;
 
+import net.allimore.tod.Utilities.Interfaces.ITriggerRecieveDamage;
+import net.allimore.tod.Utilities.Interfaces.ITriggerRecieveDamageEntity;
+import net.allimore.tod.Utilities.Triggers;
 import net.allimore.tod.items.*;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -7,6 +10,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.ArrayList;
 
 public class DamageListener implements Listener {
 
@@ -21,45 +26,22 @@ public class DamageListener implements Listener {
         if( !(event.getEntity() instanceof Player) ){ return; }
         Player player = (Player)event.getEntity();
 
-        if ( HandleSpectral(event, player)){ return; }
-        if( HandleImmunity(event, player)) { return; }
-
-
-        if(CharmZephyr.HasCharm(player) && (player.getHealth() - event.getFinalDamage() <= 0) ) { CharmZephyr.RunCharm(event); }
-        if(CharmResurection.HasCharm(player) && (player.getHealth() - event.getFinalDamage() <= 0) ) { CharmResurection.RunCharm(event); }
+        ArrayList<ITriggerRecieveDamage> triggers = Triggers.GetRecieveDamageTriggers();
+        for(ITriggerRecieveDamage trigger : triggers){
+            trigger.RunTrigger(event);
+            if(event.isCancelled()) { return; }
+        }
     }
 
     @EventHandler
     public void OnEntityDamageEntity(EntityDamageByEntityEvent event){
-        if( CharmIncorporeal.SPECTRAL_PLAYERS.contains(event.getDamager())){
-            event.setCancelled(true);
-            return;
-        }
-    }
 
-    private boolean HandleSpectral(EntityDamageEvent event, Player player){
-        if( CharmIncorporeal.SPECTRAL_PLAYERS.contains(player) ){
-            event.setCancelled(true);
-            return true;
-        }
-        return false;
-    }
-
-    private boolean HandleImmunity (EntityDamageEvent event, Player player) {
-        if (CharmPyroCloak.FIRE_IMMUNE_PLAYERS.contains(player)){
-            if(CharmPyroCloak.ImuneTo(event.getCause())){
-                event.setCancelled(true);
-                return true;
+        ArrayList<ITriggerRecieveDamageEntity> triggers = Triggers.GetRecieveDamageEntityTriggers();
+        for(ITriggerRecieveDamageEntity trigger : triggers){
+            trigger.RunTrigger(event);
+            if(event.isCancelled()){
+                return;
             }
         }
-
-        if (FoodMundusExtract.POISON_IMMUNE_PLAYERS.contains(player)){
-            if(FoodMundusExtract.IsImmune(event.getCause())){
-                event.setCancelled(true);
-                return true;
-            }
-        }
-
-        return false;
     }
 }

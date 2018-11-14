@@ -1,11 +1,15 @@
 package net.allimore.tod;
 
+import net.allimore.tod.Utilities.Interfaces.ITriggerBlockBreak;
+import net.allimore.tod.Utilities.Triggers;
 import net.allimore.tod.Utilities.Utils;
 import net.allimore.tod.items.ToolAllimoreBreaker;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
+
+import java.util.ArrayList;
 
 public class BlockListener implements Listener {
 
@@ -14,7 +18,12 @@ public class BlockListener implements Listener {
         ItemStack item = event.getPlayer().getInventory().getItemInMainHand();
 
         if(item != null){
-            if(Utils.ItemsMatch(item, ToolAllimoreBreaker.MATERIAL, ToolAllimoreBreaker.NAME)) { ToolAllimoreBreaker.Run(event); }
+            ArrayList<ITriggerBlockBreak> triggers = Triggers.GetBlockBreakTriggers();
+            for(ITriggerBlockBreak trigger : triggers){
+                if(trigger.GetCharm().ItemMatch(item)){
+                    trigger.RunTrigger(event);
+                }
+            }
         }
     }
 }

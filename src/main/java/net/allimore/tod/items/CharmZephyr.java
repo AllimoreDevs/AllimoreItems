@@ -1,9 +1,7 @@
 package net.allimore.tod.items;
 
-import net.allimore.tod.Utilities.CharmLang;
-import net.allimore.tod.Utilities.CharmUseInfo;
-import net.allimore.tod.Utilities.SoundInfo;
-import net.allimore.tod.Utilities.Utils;
+import net.allimore.tod.Utilities.*;
+import net.allimore.tod.Utilities.Interfaces.ITriggerRecieveDamage;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.Sound;
@@ -13,7 +11,7 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.ArrayList;
 
-public class CharmZephyr {
+public class CharmZephyr extends Charm implements ITriggerRecieveDamage {
     public static String NAME = ChatColor.AQUA + "Zephyr" + ChatColor.WHITE + "Charm";
     public static Material MATERIAL = Material.LIGHT_GRAY_DYE;
 
@@ -26,6 +24,11 @@ public class CharmZephyr {
     private static String CONSUME_STRING = CharmLang.NEGATIVE_COLOR + "Your charm disperses into a cloud of vapor.";
 
     private static SoundInfo USE_SOUND = new SoundInfo(Sound.BLOCK_SAND_PLACE, 3, 0.3f);
+
+    public CharmZephyr(){
+        super(NAME, MATERIAL);
+        Triggers.RegisterRecieveDamageTrigger(this);
+    }
 
     public static ItemStack CreateZephyrCharm(){
         ArrayList<String> lore = new ArrayList<String>() {{
@@ -52,8 +55,14 @@ public class CharmZephyr {
         Utils.ConsumeFromOffHand(player);
     }
 
-    public static void RunCharm (EntityDamageEvent event){
+    @Override
+    public void RunTrigger (EntityDamageEvent event){
         Player player = (Player)event.getEntity();
+
+        if(! super.ItemMatchOffHand(player) || player.getHealth() - event.getFinalDamage() > 0){
+            return;
+        }
+
         ItemStack charm = player.getInventory().getItemInOffHand();
 
         UseCharm(event, player);

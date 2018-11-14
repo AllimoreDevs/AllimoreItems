@@ -1,6 +1,9 @@
 package net.allimore.tod.items;
 
+import net.allimore.tod.Utilities.Charm;
 import net.allimore.tod.Utilities.CharmLang;
+import net.allimore.tod.Utilities.Interfaces.ITriggerConsume;
+import net.allimore.tod.Utilities.Triggers;
 import net.allimore.tod.Utilities.Utils;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -10,7 +13,7 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.ArrayList;
 
-public class FoodSilverFruit {
+public class FoodSilverFruit extends Charm implements ITriggerConsume {
     public static String NAME = ChatColor.GRAY + "Silver Fruit";
     public static Material MATERIAL = Material.APPLE;
 
@@ -18,12 +21,18 @@ public class FoodSilverFruit {
 
     private static String USE_STRING = CharmLang.POSITIVE_COLOR + "The Fruit is delicious and upon eating it you feel totally sated!";
 
+    public FoodSilverFruit(){
+        super(NAME, MATERIAL);
+        Triggers.RegisterConsumeTrigger(this);
+    }
+
     public static ItemStack CreateSilverFruit(){
         ArrayList<String> lore = new ArrayList<String>() {{ add(LORE); }};
         return Utils.ConstructItemStack(NAME, MATERIAL, lore);
     }
 
-    public static void RunFood(PlayerItemConsumeEvent event){
+    @Override
+    public void RunTrigger(PlayerItemConsumeEvent event){
         event.setCancelled(true);
         Player player = event.getPlayer();
 
@@ -32,5 +41,10 @@ public class FoodSilverFruit {
         player.setFoodLevel(20);
 
         Utils.ConsumeFromMainHand(player);
+    }
+
+    @Override
+    public Charm GetCharm() {
+        return this;
     }
 }
