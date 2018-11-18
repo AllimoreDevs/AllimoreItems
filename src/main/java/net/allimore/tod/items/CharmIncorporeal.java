@@ -23,7 +23,7 @@ public class CharmIncorporeal extends Charm implements ITriggerInteract, ITrigge
     public static String NAME = ChatColor.GRAY + "Incorporeal Pendant.";
     public static Material MATERIAL = Material.QUARTZ;
 
-    private static String LORE1 = CharmLang.LORE_COLOR + "The Pendant emits a bright white light from it's center.";
+    private static String LORE1 = CharmLang.LORE_COLOR + "The Pendant emits a bright white light from it/s center.";
     private static String LORE2 = CharmLang.LORE_COLOR + "Walk as the spirits do and become untouchable.";
 
     private static int STARTING_USES = 3;

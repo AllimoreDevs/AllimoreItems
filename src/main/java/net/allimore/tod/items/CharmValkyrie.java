@@ -60,7 +60,12 @@ public class CharmValkyrie extends Charm implements ITriggerInteract {
 
     public static Town GetPlayerTown(Resident resident, Player player){
         try {
-            if(! resident.hasTown()) { return null; }
+            if(! resident.hasTown()) {
+                // Has no Town
+                player.sendMessage(FAIL_NO_TOWN);
+                FAIL_SOUND.PlaySound(player);
+                return null;
+            }
 
             return resident.getTown();
 
@@ -80,7 +85,8 @@ public class CharmValkyrie extends Charm implements ITriggerInteract {
             // Player is not in Resident Registry
             player.sendMessage(FAIL_NO_REGISTRY);
             FAIL_SOUND.PlaySound(player);
-            return null; }
+            return null;
+        }
         return residents.get(player.getName().toLowerCase());
     }
 
@@ -118,8 +124,10 @@ public class CharmValkyrie extends Charm implements ITriggerInteract {
                 }
             }
 
-        } catch (NotRegisteredException e) {}
-
+        } catch (NotRegisteredException e) {
+            player.sendMessage("An Error occurred while trying to get the town you belong to.");
+            return false;
+        }
         return false;
     }
 
@@ -131,6 +139,7 @@ public class CharmValkyrie extends Charm implements ITriggerInteract {
                 return true;
             }
         } catch (NotRegisteredException e) {
+            player.sendMessage("An Error occurred while trying to get the town you belong to.");
             return false;
         }
         return false;
@@ -156,6 +165,8 @@ public class CharmValkyrie extends Charm implements ITriggerInteract {
 
     @Override
     public void RunTrigger(PlayerInteractEvent event){
+        event.setCancelled(true);
+
         Player player = event.getPlayer();
         Resident resident = GetResident(player);
         Town town = GetPlayerTown(resident, player);

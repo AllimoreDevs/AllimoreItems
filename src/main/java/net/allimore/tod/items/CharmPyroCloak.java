@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 
 public class CharmPyroCloak extends Charm implements ITriggerInteract, ITriggerRecieveDamage {
-    public static String NAME = ChatColor.DARK_RED + "Pyromancer's Cloak";
+    public static String NAME = ChatColor.DARK_RED + "Pyromancers Cloak";
     public static Material MATERIAL = Material.BLAZE_POWDER;
 
     private static String LORE1 = CharmLang.LORE_COLOR + "The very shape and form of the cloak";
