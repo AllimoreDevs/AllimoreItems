@@ -28,6 +28,8 @@ public class CharmClearSky extends Charm implements ITriggerInteract {
     private static SoundInfo USE_SOUND = CharmSounds.USE_SOUND;
     private static SoundInfo FAIL_SOUND = CharmSounds.FAIL_SOUND;
 
+
+
     public CharmClearSky(){
         super(NAME, MATERIAL);
         Triggers.RegisterInteractTrigger(this);
@@ -100,7 +102,7 @@ public class CharmClearSky extends Charm implements ITriggerInteract {
     }
 
     @Override
-    public Action GetAction() {
-        return Action.RIGHT_CLICK_AIR;
+    public ArrayList<Action> GetAction() {
+        return CharmMagicMirror.GENERIC_ACTIONS;
     }
 }

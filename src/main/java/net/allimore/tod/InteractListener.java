@@ -26,7 +26,7 @@ public class InteractListener implements Listener {
 
         ArrayList<ITriggerInteract> triggers = Triggers.GetInteractTriggers();
         for(ITriggerInteract trigger : triggers){
-            if(event.getAction() == trigger.GetAction()){
+            if(trigger.GetAction().contains(event.getAction())){
                 if(trigger.GetCharm().ItemMatch(event.getItem())){
                     trigger.RunTrigger(event);
                     return;

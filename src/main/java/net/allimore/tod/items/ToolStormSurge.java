@@ -122,8 +122,8 @@ public class ToolStormSurge extends Charm implements ITriggerRecieveDamage, ITri
     }
 
     @Override
-    public Action GetAction() {
-        return Action.RIGHT_CLICK_AIR;
+    public ArrayList<Action> GetAction() {
+        return CharmMagicMirror.GENERIC_ACTIONS;
     }
 
     private static void StrikeEntity(Entity entity, Player player){

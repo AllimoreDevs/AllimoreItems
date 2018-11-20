@@ -18,8 +18,6 @@ public class CharmReturn extends Charm implements ITriggerInteract {
 
     private static String LORE = CharmLang.LORE_COLOR + "Teleports you to a saved location.";
 
-    private static int STARTING_USES = 3;
-
     private static String USE_STRING = CharmLang.GENERIC_CHARM_TELEPORT;
     private static String SAVE_STRING = CharmLang.POSITIVE_COLOR + "The Charm will remember this place.";
 
@@ -38,7 +36,8 @@ public class CharmReturn extends Charm implements ITriggerInteract {
 
     private static void SaveLocation(Player player, ItemStack item){
         ItemMeta meta = item.getItemMeta();
-        ArrayList<String> lore = (ArrayList<String>)meta.getLore();
+        ArrayList<String> lore = new ArrayList<String>();
+        lore.add(LORE);
         lore.add(CharmLang.LORE_COLOR + "x:" + player.getLocation().getX()); //  Line 1 | +Co-ords start at index 4
         lore.add(CharmLang.LORE_COLOR + "y:" + player.getLocation().getY()); //  Line 2 | +Co-ords start at index 4
         lore.add(CharmLang.LORE_COLOR + "z:" + player.getLocation().getZ()); //  Line 3 | +Co-ords start at index 4
@@ -84,6 +83,11 @@ public class CharmReturn extends Charm implements ITriggerInteract {
         Player player = event.getPlayer();
         ItemStack item = event.getItem();
 
+        if(player.isSneaking()){
+            SaveLocation(player, item);
+            return;
+        }
+
         if(! LocationSaved(item)){
             if(Utils.CanSpilt(item)){
                 ItemStack newItem = CreateCharm();
@@ -105,8 +109,8 @@ public class CharmReturn extends Charm implements ITriggerInteract {
     }
 
     @Override
-    public Action GetAction() {
-        return Action.RIGHT_CLICK_AIR;
+    public ArrayList<Action> GetAction() {
+        return CharmMagicMirror.GENERIC_ACTIONS;
     }
 
 }

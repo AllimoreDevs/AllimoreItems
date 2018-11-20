@@ -83,7 +83,7 @@ public class ScrollWarp extends Charm implements ITriggerInteract {
     }
 
     @Override
-    public Action GetAction() {
-        return Action.RIGHT_CLICK_AIR;
+    public ArrayList<Action> GetAction() {
+        return CharmMagicMirror.GENERIC_ACTIONS;
     }
 }
