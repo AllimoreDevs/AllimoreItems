@@ -3,7 +3,6 @@ package net.allimore.tod;
 import net.allimore.tod.Utilities.Interfaces.ITriggerEntityInteract;
 import net.allimore.tod.Utilities.Interfaces.ITriggerInteract;
 import net.allimore.tod.Utilities.Triggers;
-import net.allimore.tod.Utilities.Utils;
 import net.allimore.tod.items.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

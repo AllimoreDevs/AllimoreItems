@@ -125,7 +125,6 @@ public class CharmValkyrie extends Charm implements ITriggerInteract {
             }
 
         } catch (NotRegisteredException e) {
-            player.sendMessage("An Error occurred while trying to get the town you belong to.");
             return false;
         }
         return false;

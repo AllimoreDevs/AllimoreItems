@@ -22,8 +22,6 @@ public class CharmReturn extends Charm implements ITriggerInteract {
 
     private static String USE_STRING = CharmLang.GENERIC_CHARM_TELEPORT;
     private static String SAVE_STRING = CharmLang.POSITIVE_COLOR + "The Charm will remember this place.";
-    private static String WEAKESN_STRING = CharmLang.GENERIC_CHARM_WEAKEN;
-    private static String CONSUME_STRING = CharmLang.GENERIC_CHARM_CONSUME;
 
     private static SoundInfo USE_SOUND = CharmSounds.USE_SOUND;
     private static SoundInfo SAVE_SOUND = CharmSounds.FAIL_SOUND;
@@ -38,10 +36,6 @@ public class CharmReturn extends Charm implements ITriggerInteract {
         return Utils.ConstructItemStack(NAME, MATERIAL, lore);
     }
 
-    public static ItemStack CreateCharm(ArrayList<String> lore){
-        return Utils.ConstructItemStack(NAME, MATERIAL, lore);
-    }
-
     private static void SaveLocation(Player player, ItemStack item){
         ItemMeta meta = item.getItemMeta();
         ArrayList<String> lore = (ArrayList<String>)meta.getLore();
@@ -49,7 +43,6 @@ public class CharmReturn extends Charm implements ITriggerInteract {
         lore.add(CharmLang.LORE_COLOR + "y:" + player.getLocation().getY()); //  Line 2 | +Co-ords start at index 4
         lore.add(CharmLang.LORE_COLOR + "z:" + player.getLocation().getZ()); //  Line 3 | +Co-ords start at index 4
         lore.add(CharmLang.LORE_COLOR + "World:" + player.getWorld().getName()); // Line 4 | World names starts at index 8
-        lore.add(Utils.ConstructUseString(STARTING_USES)); // Line 5
 
         meta.setLore(lore);
         item.setItemMeta(meta);
@@ -104,23 +97,6 @@ public class CharmReturn extends Charm implements ITriggerInteract {
         }
 
         UseCharm(player, item);
-
-        int uses = Utils.ReadUsesFromLore(item,5);
-        uses --;
-        if(uses <= 0){
-            player.sendMessage(CONSUME_STRING);
-            Utils.ConsumeFromMainHand(player);
-        } else {
-            player.sendMessage(WEAKESN_STRING);
-            if(Utils.CanSpilt(item)){
-                ArrayList<String> lore = (ArrayList<String>)item.getLore();
-                CharmUseInfo info = new CharmUseInfo(5, uses);
-
-                Utils.SplitOffCharmStackMain(player, CreateCharm(lore), info);
-            }else {
-                Utils.UpdateUseLine(item, 5, uses);
-            }
-        }
     }
 
     @Override

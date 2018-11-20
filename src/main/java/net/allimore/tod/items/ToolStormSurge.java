@@ -26,22 +26,12 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 public class ToolStormSurge extends Charm implements ITriggerRecieveDamage, ITriggerRecieveDamageEntity, ITriggerInteract {
-    public static String NAME = String.format("%s%s<-%s%sO %s%sStorm %s%sSurge %s%sO%s%s->",
-            ChatColor.DARK_BLUE, ChatColor.BOLD, ChatColor.AQUA, ChatColor.BOLD, ChatColor.BLUE, ChatColor.BOLD,
-            ChatColor.WHITE, ChatColor.BOLD, ChatColor.AQUA, ChatColor.BOLD, ChatColor.BLUE, ChatColor.BOLD);
+    public static String NAME = ChatColor.BLUE + "Aurryn Infantry Blade";
 
     public static Material MATERIAL = Material.DIAMOND_SWORD;
 
     private static String LORE1 =
-            CharmLang.LORE_COLOR + "A Legendary weapon once wielded by the Aurrn Arch-Battlemage.";
-    private static String LORE2 =
-            CharmLang.LORE_COLOR + "Legend says it contains the heart of the raging storm in";
-    private static String LORE3 =
-            CharmLang.LORE_COLOR + "which it was forged. Given the immense energy emanating";
-    private static String LORE4 =
-            CharmLang.LORE_COLOR + "from the blade, it seems there may be some truth to those";
-    private static String LORE5 =
-            CharmLang.LORE_COLOR + "old tales.";
+            CharmLang.LORE_COLOR + "A powerful blade used by Aurryn soldiers.";
 
     private static String cooldownPrefix = CharmLang.LORE_COLOR + "Cooldown: ";
 
@@ -64,10 +54,6 @@ public class ToolStormSurge extends Charm implements ITriggerRecieveDamage, ITri
     public static ItemStack Create(){
         ArrayList<String> lore = new ArrayList<>();
         lore.add(LORE1);
-        lore.add(LORE2);
-        lore.add(LORE3);
-        lore.add(LORE4);
-        lore.add(LORE5);
         lore.add(cooldownPrefix + "false");
 
         ItemStack item = Utils.ConstructItemStack(NAME, MATERIAL, lore);
