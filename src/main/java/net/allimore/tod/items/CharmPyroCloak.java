@@ -74,10 +74,7 @@ public class CharmPyroCloak extends Charm implements ITriggerInteract, ITriggerR
     public static boolean ImuneTo(EntityDamageEvent.DamageCause cause){
         switch(cause){
             case FIRE:
-            case LAVA:
             case FIRE_TICK:
-            case HOT_FLOOR:
-            case DRAGON_BREATH:
                 return true;
         }
 
