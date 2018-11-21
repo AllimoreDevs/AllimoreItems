@@ -25,7 +25,7 @@ import org.bukkit.util.Vector;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class ToolStormSurge extends Charm implements ITriggerRecieveDamage, ITriggerRecieveDamageEntity, ITriggerInteract {
+public class ToolAurrynBlade extends Charm implements ITriggerRecieveDamage, ITriggerRecieveDamageEntity, ITriggerInteract {
     public static String NAME = ChatColor.BLUE + "Aurryn Infantry Blade";
 
     public static Material MATERIAL = Material.DIAMOND_SWORD;
@@ -44,7 +44,7 @@ public class ToolStormSurge extends Charm implements ITriggerRecieveDamage, ITri
 
     public static ArrayList<BukkitRunnable> CoolDownTasks = new ArrayList<>();
 
-    public ToolStormSurge(){
+    public ToolAurrynBlade(){
         super(NAME, MATERIAL);
         Triggers.RegisterRecieveDamageTrigger(this);
         Triggers.RegisterRecieveDamageEntityTrigger(this);

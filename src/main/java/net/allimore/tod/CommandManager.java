@@ -5,7 +5,7 @@ import com.earth2me.essentials.commands.WarpNotFoundException;
 import com.palmergames.bukkit.towny.Towny;
 import com.palmergames.bukkit.towny.object.Town;
 import net.allimore.tod.items.*;
-import net.allimore.tod.items.ToolAllimoreBreaker;
+import net.allimore.tod.items.ToolAurrynBreaker;
 import net.ess3.api.InvalidWorldException;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -147,11 +147,11 @@ public class CommandManager implements CommandExecutor
             return true;
         }
         if (command.getName().equalsIgnoreCase("allimoreBreaker")){
-            GivePlayerItem(sender, ToolAllimoreBreaker.Create());
+            GivePlayerItem(sender, ToolAurrynBreaker.Create());
             return true;
         }
         if (command.getName().equalsIgnoreCase("stormsurge")){
-            GivePlayerItem(sender, ToolStormSurge.Create());
+            GivePlayerItem(sender, ToolAurrynBlade.Create());
             return true;
         }
         return true;

@@ -2,7 +2,7 @@ package net.allimore.tod;
 
 import com.earth2me.essentials.Essentials;
 import net.allimore.tod.items.CharmValkyrie;
-import net.allimore.tod.items.ToolStormSurge;
+import net.allimore.tod.items.ToolAurrynBlade;
 import org.bukkit.Server;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -58,6 +58,6 @@ public final class AllimoreItems extends JavaPlugin {
         getServer().getConsoleSender().sendMessage("[AllimoreItems] Allimore Items disabled!");
 
         CharmValkyrie.FLYING_PLAYERS.forEach((s, player) -> CharmValkyrie.ToggleFlight(player));
-        ToolStormSurge.CoolDownTasks.forEach(bukkitRunnable -> bukkitRunnable.run());
+        ToolAurrynBlade.CoolDownTasks.forEach(bukkitRunnable -> bukkitRunnable.run());
     }
 }

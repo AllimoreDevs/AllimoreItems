@@ -1,7 +1,7 @@
 package net.allimore.tod.items.tasks;
 
 import net.allimore.tod.Utilities.Utils;
-import net.allimore.tod.items.ToolStormSurge;
+import net.allimore.tod.items.ToolAurrynBlade;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitRunnable;
 
@@ -19,6 +19,6 @@ public class StormSurgeUncool extends BukkitRunnable {
     @Override
     public void run() {
         Utils.SetBooleanOnLine(item, prefix, line, false);
-        ToolStormSurge.CoolDownTasks.remove(this);
+        ToolAurrynBlade.CoolDownTasks.remove(this);
     }
 }

@@ -1,7 +1,7 @@
 package net.allimore.tod;
 
 import net.allimore.tod.Utilities.Utils;
-import net.allimore.tod.items.ToolAllimoreBreaker;
+import net.allimore.tod.items.ToolAurrynBreaker;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.enchantment.PrepareItemEnchantEvent;
@@ -13,7 +13,7 @@ public class CraftListener implements Listener {
 
     @EventHandler
     public void OnPrepEnchant(PrepareItemEnchantEvent event){
-        if(Utils.ItemsMatch(event.getItem(), ToolAllimoreBreaker.MATERIAL, ToolAllimoreBreaker.NAME)){
+        if(Utils.ItemsMatch(event.getItem(), ToolAurrynBreaker.MATERIAL, ToolAurrynBreaker.NAME)){
             event.setCancelled(true);
         }
     }
@@ -24,7 +24,7 @@ public class CraftListener implements Listener {
         ItemStack[] items = inventory.getContents();
         for (ItemStack item : items){
             if(item == null) { continue; }
-            if(Utils.ItemsMatch(item, ToolAllimoreBreaker.MATERIAL, ToolAllimoreBreaker.NAME)){
+            if(Utils.ItemsMatch(item, ToolAurrynBreaker.MATERIAL, ToolAurrynBreaker.NAME)){
                 event.setResult(null);
             }
         }

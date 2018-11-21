@@ -16,8 +16,8 @@ import org.bukkit.potion.PotionEffectType;
 
 import java.util.ArrayList;
 
-public class ToolAllimoreBreaker extends Charm implements ITriggerBlockBreak {
-    public static String NAME = String.format("%sAllimore %sBreaker", ChatColor.BLUE, ChatColor.GREEN);
+public class ToolAurrynBreaker extends Charm implements ITriggerBlockBreak {
+    public static String NAME = String.format("%sAurryn %sBreaker", ChatColor.BLUE, ChatColor.GREEN);
     public static Material MATERIAL = Material.DIAMOND_PICKAXE;
 
     private static String LORE1 =
@@ -34,7 +34,7 @@ public class ToolAllimoreBreaker extends Charm implements ITriggerBlockBreak {
 
     private static PotionEffect EFFECT = new PotionEffect(PotionEffectType.FAST_DIGGING, 10, 2);
 
-    public ToolAllimoreBreaker(){
+    public ToolAurrynBreaker(){
         super(NAME, MATERIAL);
         Triggers.RegisterBlockBreakTrigger(this);
     }

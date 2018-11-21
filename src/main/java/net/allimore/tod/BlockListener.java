@@ -2,8 +2,6 @@ package net.allimore.tod;
 
 import net.allimore.tod.Utilities.Interfaces.ITriggerBlockBreak;
 import net.allimore.tod.Utilities.Triggers;
-import net.allimore.tod.Utilities.Utils;
-import net.allimore.tod.items.ToolAllimoreBreaker;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
